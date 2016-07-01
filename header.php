@@ -27,10 +27,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="bglogo">
-                    <div class="logo">
+                    <div class="bglogo logo">
                         <a href="<?php echo home_url( '/' ); ?>" class="logo-link"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo" class="logo-img"></a>
-                    </div>
                     </div>
                 </div>
             </div>
