@@ -37,12 +37,12 @@
 
  <!-- NAVIGATION CENTER
 ================================================== -->
-    <header id="navigation-center" role="banner">
-        <div class="container clearfix">
+    <header class="navigation-center" role="banner">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="main-nav">
-                    <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+                    <nav class="primary-navigation site-navigation" role="navigation">
                      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
                     </nav>
                 </div>
