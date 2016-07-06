@@ -6,7 +6,7 @@ require get_template_directory() . '/inc/main-functions.php';
 function szybkikontakt_widgets_init() {
 /**
  * START Sidebar Boczny
- */	
+ */
 	register_sidebar( array(
 		'name'          => __( 'Boczny Widget', 'szybkikontakt' ),
 		'id'            => 'pierwszy-boczny',
@@ -18,17 +18,17 @@ function szybkikontakt_widgets_init() {
 	) );
 /**
  * END Sidebar Boczny
- */	
+ */
 
 /**
  *  START Sidebar Dolny
- */	
+ */
 
 
 
 /**
  * END Sidebar Dolny
- */	
+ */
 
 }
 add_action( 'widgets_init', 'szybkikontakt_widgets_init' );
@@ -38,8 +38,8 @@ add_action( 'widgets_init', 'szybkikontakt_widgets_init' );
  */
 function my_init() {
 	if (!is_admin()) {
-		wp_deregister_script('jquery'); 
-		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', false, '1.8.2');  
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js', false, '2.0.2');
 		wp_enqueue_script('jquery');
 	}
 }
@@ -56,10 +56,10 @@ function szybkikontakt_scripts() {
 	wp_enqueue_style( 'szybkikontakt-lightbox', get_template_directory_uri() . '/css/lightbox.css', array(), '2.8.1', 'all' );
 	wp_enqueue_style( 'szybkikontakt-style', get_stylesheet_uri() );
     // Sekcja JavaScript
-    wp_enqueue_script( 'szybkikontakt-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), '4.2.3', true);
+  wp_enqueue_script( 'szybkikontakt-bxslider', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), '4.2.3', true);
 	wp_enqueue_script( 'szybkikontakt-lightbox', get_template_directory_uri() . '/js/lightbox.min.js', array(), '2.8.1', true);
 	wp_enqueue_script( 'szybkikontakt-whcookies', get_template_directory_uri() . '/js/whcookies.js', array('jquery'), '1.0.0', true);
-	wp_enqueue_script( 'szybkikontakt-menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0.0', true);		
+	wp_enqueue_script( 'szybkikontakt-menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'szybkikontakt_scripts' );
 
@@ -77,5 +77,3 @@ if( !function_exists( 'ie_scripts' ) ) {
    	}
    	add_action( 'wp_head', 'ie_scripts' );
 }; // end if
-
-
